@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saint Raphael | Clínica Especializada em Santos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#f7fbfc;
+    color:#0b2f3a;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+:root{
+    --azul:#087b96;
+    --azul2:#4fc3d8;
+    --verde:#69d2b7;
+    --escuro:#062d38;
+    --dourado:#d7b76a;
+    --cinza:#607782;
+    --branco:#ffffff;
+    --sombra:0 28px 80px rgba(6,45,56,.16);
+}
+
+/* TOPO */
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(22px);
+    box-shadow:0 8px 30px rgba(6,45,56,.08);
+}
+
+.nav{
+    width:92%;
+    max-width:1280px;
+    min-height:88px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 12px 32px rgba(8,123,150,.22);
+}
+
+.logo h1{
+    font-size:22px;
+    color:var(--escuro);
+    letter-spacing:-.6px;
+}
+
+.logo span{
+    display:block;
+    color:var(--azul);
+    font-size:12px;
+    font-weight:800;
+    margin-top:3px;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    font-size:14px;
+    font-weight:800;
+    color:#315763;
+}
+
+.menu a:hover{
+    color:var(--azul);
+}
+
+.btn-whats{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:13px 22px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#18c768,#0b9d4b);
+    color:white;
+    font-weight:900;
+    box-shadow:0 16px 38px rgba(24,199,104,.30);
+    transition:.3s;
+}
+
+.btn-whats:hover{
+    transform:translateY(-3px);
+}
+
+.btn-whats img{
+    width:20px;
+    height:20px;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    padding:160px 5% 95px;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(79,195,216,.34), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(105,210,183,.30), transparent 30%),
+        linear-gradient(135deg,#eefbff 0%,#ffffff 48%,#e4f8fb 100%);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:560px;
+    height:560px;
+    right:-210px;
+    top:150px;
+    border-radius:50%;
+    background:linear-gradient(135deg,rgba(8,123,150,.20),rgba(105,210,183,.25));
+}
+
+.hero-content{
+    max-width:1280px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.03fr .97fr;
+    gap:62px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.tag{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:50px;
+    background:white;
+    color:var(--azul);
+    font-size:14px;
+    font-weight:900;
+    box-shadow:0 12px 35px rgba(8,123,150,.12);
+    margin-bottom:24px;
+}
+
+.hero h2{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(48px,7vw,92px);
+    line-height:.96;
+    color:var(--escuro);
+    letter-spacing:-2px;
+    margin-bottom:26px;
+}
+
+.hero h2 span{
+    background:linear-gradient(135deg,var(--azul),#159f8f);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:710px;
+    color:#59737d;
+    font-size:18px;
+    line-height:1.85;
+    margin-bottom:33px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn-main{
+    display:inline-block;
+    padding:16px 29px;
+    border-radius:50px;
+    background:linear-gradient(135deg,var(--azul),#055d73);
+    color:white;
+    font-weight:900;
+    box-shadow:0 18px 40px rgba(8,123,150,.30);
+    transition:.3s;
+}
+
+.btn-main:hover{
+    transform:translateY(-4px);
+}
+
+.btn-light{
+    display:inline-block;
+    padding:16px 29px;
+    border-radius:50px;
+    background:white;
+    color:var(--escuro);
+    font-weight:900;
+    box-shadow:0 18px 40px rgba(6,45,56,.10);
+    transition:.3s;
+}
+
+.btn-light:hover{
+    transform:translateY(-4px);
+}
+
+.hero-card{
+    background:rgba(255,255,255,.76);
+    border:1px solid rgba(255,255,255,.95);
+    backdrop-filter:blur(22px);
+    border-radius:44px;
+    padding:26px;
+    box-shadow:var(--sombra);
+}
+
+.hero-card img{
+    width:100%;
+    height:460px;
+    object-fit:cover;
+    border-radius:34px;
+    background:#dff7fb;
+}
+
+.hero-info{
+    margin-top:20px;
+    padding:24px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#062d38,#087b96);
+    color:white;
+}
+
+.hero-info h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.hero-info p{
+    margin:0;
+    font-size:15px;
+    color:#eaffff;
+    line-height:1.7;
+}
+
+/* PADRÃO */
+section{
+    padding:98px 5%;
+}
+
+.container{
+    max-width:1280px;
+    margin:auto;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.titulo span{
+    color:var(--azul);
+    font-size:13px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.6px;
+}
+
+.titulo h2{
+    font-family:'Playfair Display', serif;
+    color:var(--escuro);
+    font-size:clamp(36px,4vw,64px);
+    margin-top:9px;
+}
+
+.titulo p{
+    max-width:800px;
+    margin:16px auto 0;
+    color:var(--cinza);
+    line-height:1.85;
+}
+
+/* SOBRE */
+.sobre-grid{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:55px;
+    align-items:center;
+}
+
+.foto-clinica{
+    min-height:520px;
+    border-radius:44px;
+    background:
+        linear-gradient(rgba(6,45,56,.16),rgba(6,45,56,.16)),
+        url("clinica.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:var(--sombra);
+    position:relative;
+}
+
+.foto-clinica::after{
+    content:"Ambiente Saint Raphael";
+    position:absolute;
+    left:26px;
+    bottom:26px;
+    background:white;
+    color:var(--escuro);
+    padding:12px 18px;
+    border-radius:50px;
+    font-weight:900;
+}
+
+.sobre-texto h2{
+    font-family:'Playfair Display', serif;
+    font-size:52px;
+    color:var(--escuro);
+    margin-bottom:20px;
+}
+
+.sobre-texto p{
+    color:#5c747d;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.mini-destaques{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:30px;
+}
+
+.mini{
+    background:white;
+    padding:22px;
+    border-radius:25px;
+    box-shadow:0 16px 40px rgba(6,45,56,.08);
+    border:1px solid rgba(8,123,150,.08);
+}
+
+.mini strong{
+    display:block;
+    color:var(--azul);
+    margin-bottom:7px;
+}
+
+/* TRATAMENTOS */
+.tratamentos{
+    background:linear-gradient(180deg,#ffffff 0%,#eef9fb 100%);
+}
+
+.tratamentos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.tratamento{
+    background:rgba(255,255,255,.95);
+    border:1px solid rgba(8,123,150,.10);
+    border-radius:34px;
+    padding:30px;
+    box-shadow:0 20px 55px rgba(6,45,56,.09);
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.tratamento::before{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    right:-48px;
+    top:-48px;
+    background:linear-gradient(135deg,rgba(79,195,216,.22),rgba(105,210,183,.30));
+}
+
+.tratamento:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 72px rgba(6,45,56,.14);
+}
+
+.icone-img{
+    width:68px;
+    height:68px;
+    border-radius:23px;
+    background:linear-gradient(135deg,var(--azul),var(--verde));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+    position:relative;
+    z-index:2;
+}
+
+.icone-img svg{
+    width:34px;
+    height:34px;
+    fill:white;
+}
+
+.tratamento h3{
+    color:var(--escuro);
+    font-size:22px;
+    margin-bottom:12px;
+    position:relative;
+    z-index:2;
+}
+
+.tratamento p{
+    color:#637b84;
+    line-height:1.75;
+    font-size:15px;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+}
+
+.tratamento ul{
+    list-style:none;
+    position:relative;
+    z-index:2;
+}
+
+.tratamento li{
+    color:#2f535f;
+    font-size:14px;
+    margin-bottom:9px;
+    padding-left:24px;
+    position:relative;
+}
+
+.tratamento li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--azul);
+    font-weight:900;
+}
+
+/* PISCINA */
+.piscina-section{
+    background:#ffffff;
+}
+
+.piscina-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:42px;
+    align-items:center;
+}
+
+.piscina-img{
+    min-height:500px;
+    border-radius:44px;
+    background:
+        linear-gradient(rgba(6,45,56,.10),rgba(6,45,56,.10)),
+        url("piscina.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:var(--sombra);
+}
+
+.piscina-text h2{
+    font-family:'Playfair Display', serif;
+    font-size:52px;
+    color:var(--escuro);
+    margin-bottom:20px;
+}
+
+.piscina-text p{
+    color:#5c747d;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+/* RESPONSÁVEL */
+.responsavel{
+    background:
+        radial-gradient(circle at 18% 18%, rgba(79,195,216,.20), transparent 28%),
+        linear-gradient(135deg,#062d38,#0b718b);
+    color:white;
+}
+
+.resp-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:52px;
+    align-items:center;
+}
+
+.resp-foto{
+    min-height:470px;
+    border-radius:44px;
+    background:
+        linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10)),
+        url("karly.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 28px 75px rgba(0,0,0,.24);
+    position:relative;
+}
+
+.resp-foto::after{
+    content:"Responsável Técnica";
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    background:white;
+    color:var(--escuro);
+    padding:12px 18px;
+    border-radius:50px;
+    font-weight:900;
+}
+
+.resp-texto span{
+    color:var(--dourado);
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+}
+
+.resp-texto h2{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    margin:10px 0 20px;
+}
+
+.resp-texto p{
+    color:#e8fbff;
+    line-height:1.9;
+    margin-bottom:17px;
+}
+
+.selo{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 22px;
+    border-radius:50px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.26);
+    font-weight:900;
+}
+
+/* BENEFÍCIOS */
+.beneficios-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.beneficio{
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 18px 45px rgba(6,45,56,.08);
+    text-align:center;
+    border:1px solid rgba(8,123,150,.08);
+}
+
+.beneficio h3{
+    color:var(--escuro);
+    margin-bottom:10px;
+}
+
+.beneficio p{
+    color:#637b84;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* GALERIA */
+.galeria{
+    background:white;
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.galeria-item{
+    min-height:250px;
+    border-radius:30px;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 18px 45px rgba(6,45,56,.10);
+    overflow:hidden;
+    position:relative;
+}
+
+.galeria-item::after{
+    content:attr(data-title);
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    background:rgba(255,255,255,.92);
+    color:var(--escuro);
+    padding:10px 15px;
+    border-radius:30px;
+    font-weight:900;
+    font-size:14px;
+}
+
+.g1{background-image:url("recepcao.jpg");}
+.g2{background-image:url("piscina.jpg");}
+.g3{background-image:url("clinica.jpg");}
+.g4{background-image:url("fachada.jpg");}
+
+/* LOCAL */
+.local{
+    background:linear-gradient(135deg,#eaf8fb,#ffffff);
+}
+
+.local-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:34px;
+}
+
+.local-card{
+    background:white;
+    border-radius:40px;
+    padding:40px;
+    box-shadow:var(--sombra);
+}
+
+.local-card h2{
+    font-family:'Playfair Display', serif;
+    color:var(--escuro);
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.local-card p{
+    color:#607782;
+    line-height:1.8;
+    margin-bottom:17px;
+}
+
+.local-foto{
+    min-height:430px;
+    border-radius:40px;
+    background:
+        linear-gradient(rgba(6,45,56,.55),rgba(6,45,56,.55)),
+        url("fachada.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:var(--sombra);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:35px;
+}
+
+.local-foto h3{
+    font-family:'Playfair Display', serif;
+    font-size:50px;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#062d38,#087b96);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(38px,5vw,66px);
+    margin-bottom:18px;
+}
+
+.cta p{
+    max-width:770px;
+    margin:auto;
+    color:#e8fbff;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* BOTÃO FIXO */
+.balaozinho{
+    position:fixed;
+    right:22px;
+    bottom:96px;
+    background:white;
+    color:#062d38;
+    padding:13px 18px;
+    border-radius:25px;
+    font-weight:900;
+    font-size:14px;
+    box-shadow:0 12px 35px rgba(0,0,0,.16);
+    z-index:998;
+    animation:sobeDesce 1.8s infinite;
+}
+
+.balaozinho::after{
+    content:"";
+    position:absolute;
+    right:22px;
+    bottom:-8px;
+    width:17px;
+    height:17px;
+    background:white;
+    transform:rotate(45deg);
+}
+
+@keyframes sobeDesce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+.float-whats{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#18c768,#0b9d4b);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    box-shadow:0 14px 35px rgba(24,199,104,.36);
+}
+
+.float-whats img{
+    width:34px;
+    height:34px;
+}
+
+footer{
+    background:#052632;
+    color:#dff8ff;
+    text-align:center;
+    padding:35px 5%;
+}
+
+footer strong{
+    color:white;
+}
+
+/* RESPONSIVO */
+@media(max-width:1100px){
+    .menu{
+        display:none;
+    }
+
+    .hero-content,
+    .sobre-grid,
+    .resp-grid,
+    .local-grid,
+    .piscina-box{
+        grid-template-columns:1fr;
+    }
+
+    .tratamentos-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .beneficios-grid,
+    .galeria-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+    .btn-whats{
+        display:none;
+    }
+
+    .logo h1{
+        font-size:17px;
+    }
+
+    .logo img{
+        width:58px;
+        height:58px;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero-card img{
+        height:310px;
+    }
+
+    .tratamentos-grid,
+    .beneficios-grid,
+    .galeria-grid,
+    .mini-destaques{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:76px 5%;
+    }
+
+    .balaozinho{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Saint Raphael">
+            <div>
+                <h1>Saint Raphael</h1>
+                <span>Clínica Especializada</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#tratamentos">Tratamentos</a>
+            <a href="#piscina">Hidroterapia</a>
+            <a href="#responsavel">Karly</a>
+            <a href="#local">Localização</a>
+        </nav>
+
+        <a class="btn-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20mais%20informações." target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            WhatsApp
+        </a>
+    </div>
+</header>
+
+<div class="balaozinho">Fale com a recepção</div>
+
+<a class="float-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<section class="hero">
+    <div class="hero-content">
+        <div>
+            <div class="tag">Saúde, cuidado e qualidade de vida</div>
+
+            <h2><span>Saint Raphael</span><br>Cuidado completo para você.</h2>
+
+            <p>
+                Clínica especializada em Ozonioterapia, Terapias Integrativas, Espirometria,
+                Hidroterapia, Hidroginástica, Psicologia, Fisioterapia e Acupuntura.
+                Um espaço moderno, acolhedor e preparado para cuidar de cada paciente com atenção,
+                responsabilidade e excelência.
+                <strong>Atendemos pacientes particulares e diversos convênios.</strong>
+            </p>
+
+            <div class="hero-buttons">
+                <a class="btn-main" href="https://wa.me/5513991808627?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento%20na%20Saint%20Raphael." target="_blank">
+                    Agendar atendimento
+                </a>
+
+                <a class="btn-light" href="#tratamentos">
+                    Ver tratamentos
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <img src="foto-principal.jpg" alt="Foto principal da Saint Raphael">
+
+            <div class="hero-info">
+                <h3>Atendimento humanizado</h3>
+                <p>
+                    Tratamentos voltados ao bem-estar, recuperação, equilíbrio corporal,
+                    saúde emocional e melhora da qualidade de vida.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container">
+        <div class="sobre-grid">
+            <div class="foto-clinica"></div>
+
+            <div class="sobre-texto">
+                <h2>Uma clínica feita para cuidar de verdade.</h2>
+
+                <p>
+                    A <strong>Saint Raphael</strong> oferece atendimento acolhedor e profissional,
+                    reunindo diferentes especialidades para auxiliar na saúde, prevenção,
+                    recuperação e bem-estar dos pacientes.
+                </p>
+
+                <p>
+                    Cada atendimento é pensado com responsabilidade, respeitando as necessidades
+                    individuais de cada pessoa. O objetivo é proporcionar mais conforto,
+                    qualidade de vida e uma experiência de cuidado completa.
+                </p>
+
+                <div class="convenios-box">
+                    <strong>Convênios e atendimento particular</strong>
+                    Atendemos pacientes particulares e diversos convênios. Para saber se o seu convênio é aceito,
+                    consulte a recepção pelo WhatsApp e tire suas dúvidas com praticidade.
+                    <span>Saiba mais com nossa equipe.</span>
+                </div>
+
+                <div class="mini-destaques">
+                    <div class="mini">
+                        <strong>Atendimento acolhedor</strong>
+                        Cuidado próximo, humano e responsável.
+                    </div>
+
+                    <div class="mini">
+                        <strong>Tratamentos completos</strong>
+                        Saúde, movimento, equilíbrio e bem-estar.
+                    </div>
+
+                    <div class="mini">
+                        <strong>Estrutura preparada</strong>
+                        Ambiente pensado para conforto e segurança.
+                    </div>
+
+                    <div class="mini">
+                        <strong>Localização em Santos</strong>
+                        Fácil acesso na Rua Oswaldo Cochrane.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tratamentos" id="tratamentos">
+    <div class="container">
+        <div class="titulo">
+            <span>Especialidades</span>
+            <h2>Tratamentos oferecidos</h2>
+            <p>
+                A Saint Raphael reúne tratamentos e práticas de cuidado que auxiliam no bem-estar,
+                na recuperação física, no equilíbrio emocional e na melhora da qualidade de vida.
+            </p>
+        </div>
+
+        <div class="tratamentos-grid">
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.7 5.4 7 8.2 7 11.1A5 5 0 0 0 12 16a5 5 0 0 0 5-4.9C17 8.2 15.3 5.4 12 2zm0 20c-4.4 0-8-2.8-8-6.2 0-2.2 1.5-4.2 3.8-5.3-.5.9-.8 1.8-.8 2.8A5 5 0 0 0 12 18a5 5 0 0 0 5-4.7c0-1-.3-1.9-.8-2.8 2.3 1.1 3.8 3.1 3.8 5.3C20 19.2 16.4 22 12 22z"/></svg>
+                </div>
+                <h3>Ozonioterapia</h3>
+                <p>Terapia complementar com acompanhamento profissional, voltada ao cuidado, bem-estar e equilíbrio do organismo.</p>
+                <ul>
+                    <li>Abordagem complementar</li>
+                    <li>Cuidado individualizado</li>
+                    <li>Bem-estar e recuperação</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M12 22C7 18.5 4 14.7 4 10.8 4 6 7.6 3 12 3s8 3 8 7.8c0 3.9-3 7.7-8 11.2zm0-5c2.2 0 4-1.8 4-4 0-2.8-2.6-5.4-4-6.6C10.6 7.6 8 10.2 8 13c0 2.2 1.8 4 4 4z"/></svg>
+                </div>
+                <h3>Terapias Integrativas</h3>
+                <p>Práticas que olham o paciente de forma mais completa, auxiliando no equilíbrio físico e emocional.</p>
+                <ul>
+                    <li>Relaxamento e equilíbrio</li>
+                    <li>Cuidado humanizado</li>
+                    <li>Bem-estar global</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M8 13V5a4 4 0 0 0-4 4v4a5 5 0 0 0 5 5h2v-3H9a1 1 0 0 1-1-1zm8-8v8a1 1 0 0 1-1 1h-2v3h2a5 5 0 0 0 5-5V9a4 4 0 0 0-4-4zM11 2h2v20h-2V2z"/></svg>
+                </div>
+                <h3>Espirometria</h3>
+                <p>Exame utilizado para avaliar a função pulmonar e auxiliar no acompanhamento respiratório.</p>
+                <ul>
+                    <li>Avaliação respiratória</li>
+                    <li>Monitoramento pulmonar</li>
+                    <li>Acompanhamento especializado</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8 6.2 6 9.4 6 12.2A6 6 0 0 0 12 18a6 6 0 0 0 6-5.8C18 9.4 16 6.2 12 2zm0 20c-4.4 0-8-2.5-8-5.6 0-1.4.8-2.8 2-3.8A6 6 0 0 0 12 20a6 6 0 0 0 6-7.4c1.2 1 2 2.4 2 3.8C20 19.5 16.4 22 12 22z"/></svg>
+                </div>
+                <h3>Hidroterapia</h3>
+                <p>Tratamento realizado na água, com menor impacto nas articulações e mais conforto nos movimentos.</p>
+                <ul>
+                    <li>Menor impacto corporal</li>
+                    <li>Auxílio na reabilitação</li>
+                    <li>Mais segurança nos exercícios</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M4 18c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1v3c-2 0-2-1-4-1s-2 1-4 1-2-1-4-1-2 1-4 1v-3zm0-6c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1v3c-2 0-2-1-4-1s-2 1-4 1-2-1-4-1-2 1-4 1v-3zM7 3h10v5H7V3z"/></svg>
+                </div>
+                <h3>Hidroginástica</h3>
+                <p>Atividade física na água que ajuda no condicionamento, resistência, circulação e disposição.</p>
+                <ul>
+                    <li>Baixo impacto</li>
+                    <li>Fortalecimento gradual</li>
+                    <li>Melhora da disposição</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.3 4.7 3.2 5.9V20h7.6v-5.1A7 7 0 0 0 12 2zm-2 16v-4.3l-.9-.5A5 5 0 1 1 15 13.2l-1 .5V18h-4z"/></svg>
+                </div>
+                <h3>Psicologia</h3>
+                <p>Atendimento voltado ao cuidado emocional, oferecendo escuta profissional e acolhimento.</p>
+                <ul>
+                    <li>Saúde emocional</li>
+                    <li>Acolhimento profissional</li>
+                    <li>Autoconhecimento</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M9 2h6v7h3l-6 13L6 9h3V2zm2 2v7H9.1L12 17.4 14.9 11H13V4h-2z"/></svg>
+                </div>
+                <h3>Fisioterapia</h3>
+                <p>Tratamento voltado à recuperação funcional, prevenção, fortalecimento e mobilidade.</p>
+                <ul>
+                    <li>Reabilitação física</li>
+                    <li>Alívio de dores</li>
+                    <li>Recuperação de movimentos</li>
+                </ul>
+            </div>
+
+            <div class="tratamento">
+                <div class="icone-img">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l2 8 8 2-8 2-2 8-2-8-8-2 8-2 2-8zm0 7.3L11.3 12l.7 2.7.7-2.7L15.4 12l-2.7-.7L12 8.6z"/></svg>
+                </div>
+                <h3>Acupuntura</h3>
+                <p>Prática terapêutica que pode auxiliar no equilíbrio corporal, relaxamento e cuidado complementar.</p>
+                <ul>
+                    <li>Relaxamento</li>
+                    <li>Equilíbrio corporal</li>
+                    <li>Cuidado complementar</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="piscina-section" id="piscina">
+    <div class="container">
+        <div class="piscina-box">
+            <div class="piscina-img"></div>
+
+            <div class="piscina-text">
+                <h2>Estrutura para hidroterapia e atividades aquáticas.</h2>
+
+                <p>
+                    A Saint Raphael conta com espaço preparado para atendimentos na água,
+                    favorecendo exercícios com menor impacto, mais conforto e segurança.
+                </p>
+
+                <p>
+                    A hidroterapia e a hidroginástica são opções importantes para quem busca
+                    mobilidade, fortalecimento, equilíbrio e melhora da qualidade de vida.
+                </p>
+
+                <a class="btn-main" href="https://wa.me/5513991808627?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20hidroterapia%20e%20hidroginástica." target="_blank">
+                    Saber mais
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="responsavel" id="responsavel">
+    <div class="container">
+        <div class="resp-grid">
+            <div class="resp-foto"></div>
+
+            <div class="resp-texto">
+                <span>Responsável Técnica</span>
+                <h2>Karly</h2>
+
+                <p>
+                    A Saint Raphael conta com a responsabilidade técnica de <strong>Karly</strong>,
+                    reforçando o compromisso da clínica com segurança, organização, cuidado profissional
+                    e qualidade nos atendimentos.
+                </p>
+
+                <p>
+                    A presença de uma responsável técnica garante mais confiança nos processos da clínica,
+                    com atenção ao paciente e compromisso com um atendimento humanizado e responsável.
+                </p>
+
+                <div class="selo">Cuidado profissional e humanizado</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="beneficios">
+    <div class="container">
+        <div class="titulo">
+            <span>Benefícios</span>
+            <h2>Por que escolher a Saint Raphael?</h2>
+            <p>
+                A clínica une diferentes especialidades para oferecer um cuidado mais completo,
+                moderno e acolhedor.
+            </p>
+        </div>
+
+        <div class="beneficios-grid">
+            <div class="beneficio">
+                <h3>Cuidado completo</h3>
+                <p>Especialidades diferentes reunidas em um só espaço para atender melhor cada paciente.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Bem-estar</h3>
+                <p>Tratamentos que contribuem para equilíbrio, qualidade de vida e rotina mais saudável.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Recuperação</h3>
+                <p>Atendimentos voltados à melhora funcional, mobilidade e conforto corporal.</p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Acolhimento</h3>
+                <p>Ambiente preparado para receber com atenção, respeito e responsabilidade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="galeria">
+    <div class="container">
+        <div class="titulo">
+            <span>Estrutura</span>
+            <h2>Espaços da clínica</h2>
+            <p>
+                Conheça alguns ambientes preparados para receber pacientes com conforto,
+                segurança e cuidado.
+            </p>
+        </div>
+
+        <div class="galeria-grid">
+            <div class="galeria-item g1" data-title="Recepção"></div>
+            <div class="galeria-item g2" data-title="Piscina"></div>
+            <div class="galeria-item g3" data-title="Clínica"></div>
+            <div class="galeria-item g4" data-title="Fachada"></div>
+        </div>
+    </div>
+</section>
+
+<section class="local" id="local">
+    <div class="container">
+        <div class="local-grid">
+            <div class="local-card">
+                <h2>Localização</h2>
+
+                <p>
+                    A Saint Raphael está localizada em Santos, em uma região de fácil acesso
+                    para receber pacientes com conforto e praticidade.
+                </p>
+
+                <p>
+                    <strong>Endereço:</strong><br>
+                    Rua Oswaldo Cochrane, 231<br>
+                    Santos - São Paulo<br>
+                    CEP: 11040-110
+                </p>
+
+                <p>
+                    <strong>Recepção WhatsApp:</strong><br>
+                    (13) 99180-8627
+                </p>
+
+                <p>
+                    <strong>Convênios e Particular:</strong><br>
+                    Consulte nossa equipe para verificar os convênios disponíveis, cobertura e opções de atendimento particular.
+                </p>
+
+                <a class="btn-main" href="https://www.google.com/maps/search/?api=1&query=Rua%20Oswaldo%20Cochrane%20231%20Santos%20SP" target="_blank">
+                    Abrir localização
+                </a>
+            </div>
+
+            <div class="local-foto">
+                <div>
+                    <h3>Saint Raphael</h3>
+                    <p>Rua Oswaldo Cochrane, 231 - Santos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Agende seu atendimento</h2>
+
+        <p>
+            Entre em contato com a recepção da Saint Raphael pelo WhatsApp
+            e saiba mais sobre os atendimentos disponíveis, convênios aceitos
+            e opções de atendimento particular.
+        </p>
+
+        <a class="btn-whats" href="https://wa.me/5513991808627?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Falar com a recepção
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>
+        <strong>Saint Raphael</strong> © 2026 — Clínica Especializada em Santos.
+    </p>
+</footer>
+
+</body>
+</html>
