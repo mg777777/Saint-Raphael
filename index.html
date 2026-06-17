@@ -11,27 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter', sans-serif;
-    background:#f7fbfc;
-    color:#0b2f3a;
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#f7fbfc;color:#0b2f3a;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
 
 :root{
     --azul:#087b96;
@@ -67,12 +50,7 @@ header{
     gap:25px;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
+.logo{display:flex;align-items:center;gap:14px}
 .logo img{
     width:64px;
     height:64px;
@@ -80,55 +58,39 @@ header{
     object-fit:cover;
     box-shadow:0 12px 32px rgba(8,123,150,.22);
 }
+.logo h1{font-size:22px;color:var(--escuro);letter-spacing:-.6px}
+.logo span{display:block;color:var(--azul);font-size:12px;font-weight:800;margin-top:3px}
 
-.logo h1{
-    font-size:22px;
-    color:var(--escuro);
-    letter-spacing:-.6px;
-}
+.menu{display:flex;align-items:center;gap:23px;font-size:14px;font-weight:800;color:#315763}
+.menu a:hover{color:var(--azul)}
 
-.logo span{
-    display:block;
-    color:var(--azul);
-    font-size:12px;
-    font-weight:800;
-    margin-top:3px;
-}
+.top-buttons{display:flex;align-items:center;gap:12px}
 
-.menu{
-    display:flex;
-    align-items:center;
-    gap:23px;
-    font-size:14px;
-    font-weight:800;
-    color:#315763;
-}
-
-.menu a:hover{
-    color:var(--azul);
-}
-
-.btn-whats{
+.btn-whats,.btn-instagram{
     display:inline-flex;
     align-items:center;
     gap:9px;
     padding:13px 22px;
     border-radius:50px;
-    background:linear-gradient(135deg,#18c768,#0b9d4b);
     color:white;
     font-weight:900;
-    box-shadow:0 16px 38px rgba(24,199,104,.30);
     transition:.3s;
+    white-space:nowrap;
 }
 
-.btn-whats:hover{
-    transform:translateY(-3px);
+.btn-whats{
+    background:linear-gradient(135deg,#18c768,#0b9d4b);
+    box-shadow:0 16px 38px rgba(24,199,104,.30);
 }
 
-.btn-whats img{
-    width:20px;
-    height:20px;
+.btn-instagram{
+    background:linear-gradient(135deg,#833AB4,#E1306C,#F77737);
+    box-shadow:0 16px 38px rgba(225,48,108,.30);
 }
+
+.btn-whats:hover,.btn-instagram:hover{transform:translateY(-3px)}
+.btn-whats img{width:20px;height:20px}
+.btn-instagram svg{width:20px;height:20px;fill:white}
 
 /* HERO */
 .hero{
@@ -177,7 +139,7 @@ header{
 }
 
 .hero h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:clamp(48px,7vw,92px);
     line-height:.96;
     color:var(--escuro);
@@ -199,11 +161,7 @@ header{
     margin-bottom:33px;
 }
 
-.hero-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:15px}
 
 .btn-main{
     display:inline-block;
@@ -215,10 +173,7 @@ header{
     box-shadow:0 18px 40px rgba(8,123,150,.30);
     transition:.3s;
 }
-
-.btn-main:hover{
-    transform:translateY(-4px);
-}
+.btn-main:hover{transform:translateY(-4px)}
 
 .btn-light{
     display:inline-block;
@@ -230,10 +185,7 @@ header{
     box-shadow:0 18px 40px rgba(6,45,56,.10);
     transition:.3s;
 }
-
-.btn-light:hover{
-    transform:translateY(-4px);
-}
+.btn-light:hover{transform:translateY(-4px)}
 
 .hero-card{
     background:rgba(255,255,255,.76);
@@ -260,33 +212,14 @@ header{
     color:white;
 }
 
-.hero-info h3{
-    font-size:24px;
-    margin-bottom:8px;
-}
-
-.hero-info p{
-    margin:0;
-    font-size:15px;
-    color:#eaffff;
-    line-height:1.7;
-}
+.hero-info h3{font-size:24px;margin-bottom:8px}
+.hero-info p{margin:0;font-size:15px;color:#eaffff;line-height:1.7}
 
 /* PADRÃO */
-section{
-    padding:98px 5%;
-}
+section{padding:98px 5%}
+.container{max-width:1280px;margin:auto}
 
-.container{
-    max-width:1280px;
-    margin:auto;
-}
-
-.titulo{
-    text-align:center;
-    margin-bottom:60px;
-}
-
+.titulo{text-align:center;margin-bottom:60px}
 .titulo span{
     color:var(--azul);
     font-size:13px;
@@ -294,14 +227,12 @@ section{
     text-transform:uppercase;
     letter-spacing:1.6px;
 }
-
 .titulo h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     color:var(--escuro);
     font-size:clamp(36px,4vw,64px);
     margin-top:9px;
 }
-
 .titulo p{
     max-width:800px;
     margin:16px auto 0;
@@ -342,17 +273,25 @@ section{
 }
 
 .sobre-texto h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:52px;
     color:var(--escuro);
     margin-bottom:20px;
 }
+.sobre-texto p{color:#5c747d;line-height:1.9;margin-bottom:18px}
 
-.sobre-texto p{
+.convenios-box{
+    background:white;
+    padding:24px;
+    border-radius:25px;
+    box-shadow:0 16px 40px rgba(6,45,56,.08);
+    border:1px solid rgba(8,123,150,.08);
+    margin:25px 0 0;
     color:#5c747d;
-    line-height:1.9;
-    margin-bottom:18px;
+    line-height:1.8;
 }
+.convenios-box strong{display:block;color:var(--azul);margin-bottom:7px}
+.convenios-box span{display:block;color:var(--escuro);font-weight:900;margin-top:8px}
 
 .mini-destaques{
     display:grid;
@@ -368,113 +307,83 @@ section{
     box-shadow:0 16px 40px rgba(6,45,56,.08);
     border:1px solid rgba(8,123,150,.08);
 }
+.mini strong{display:block;color:var(--azul);margin-bottom:7px}
 
-.mini strong{
-    display:block;
-    color:var(--azul);
-    margin-bottom:7px;
-}
-
-/* TRATAMENTOS */
+/* ESPECIALIDADES - ESTILO IGUAL AO EXEMPLO */
 .tratamentos{
-    background:linear-gradient(180deg,#ffffff 0%,#eef9fb 100%);
+    background:#fbf8f3;
 }
 
-.tratamentos-grid{
+.especialidades-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:24px;
+    gap:60px 28px;
 }
 
-.tratamento{
-    background:rgba(255,255,255,.95);
-    border:1px solid rgba(8,123,150,.10);
-    border-radius:34px;
-    padding:30px;
-    box-shadow:0 20px 55px rgba(6,45,56,.09);
+.especialidade-card{
+    text-align:center;
+    background:transparent;
+    box-shadow:none;
+    border:none;
+    overflow:visible;
+}
+
+.especialidade-card img{
+    width:100%;
+    height:205px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+}
+
+.especialidade-conteudo{
+    padding:0 16px;
+    margin-top:-32px;
     position:relative;
-    overflow:hidden;
-    transition:.35s;
 }
 
-.tratamento::before{
-    content:"";
-    position:absolute;
-    width:130px;
-    height:130px;
+.especialidade-icone{
+    width:66px;
+    height:66px;
     border-radius:50%;
-    right:-48px;
-    top:-48px;
-    background:linear-gradient(135deg,rgba(79,195,216,.22),rgba(105,210,183,.30));
-}
-
-.tratamento:hover{
-    transform:translateY(-8px);
-    box-shadow:0 30px 72px rgba(6,45,56,.14);
-}
-
-.icone-img{
-    width:68px;
-    height:68px;
-    border-radius:23px;
-    background:linear-gradient(135deg,var(--azul),var(--verde));
+    background:#07566a;
+    border:4px solid white;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:20px;
-    position:relative;
-    z-index:2;
-}
-
-.icone-img svg{
-    width:34px;
-    height:34px;
-    fill:white;
-}
-
-.tratamento h3{
-    color:var(--escuro);
+    margin:0 auto 18px;
+    color:white;
     font-size:22px;
-    margin-bottom:12px;
-    position:relative;
-    z-index:2;
-}
-
-.tratamento p{
-    color:#637b84;
-    line-height:1.75;
-    font-size:15px;
-    margin-bottom:18px;
-    position:relative;
-    z-index:2;
-}
-
-.tratamento ul{
-    list-style:none;
-    position:relative;
-    z-index:2;
-}
-
-.tratamento li{
-    color:#2f535f;
-    font-size:14px;
-    margin-bottom:9px;
-    padding-left:24px;
-    position:relative;
-}
-
-.tratamento li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    color:var(--azul);
     font-weight:900;
+    box-shadow:0 8px 22px rgba(6,45,56,.18);
+}
+
+.especialidade-conteudo h3{
+    color:#063846;
+    font-size:17px;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:10px;
+    line-height:1.25;
+}
+
+.especialidade-conteudo h3::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:2px;
+    background:#d7b76a;
+    margin:9px auto 0;
+}
+
+.especialidade-conteudo p{
+    color:#3f535b;
+    font-size:15px;
+    line-height:1.7;
 }
 
 /* PISCINA */
-.piscina-section{
-    background:#ffffff;
-}
+.piscina-section{background:#ffffff}
 
 .piscina-box{
     display:grid;
@@ -495,17 +404,12 @@ section{
 }
 
 .piscina-text h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:52px;
     color:var(--escuro);
     margin-bottom:20px;
 }
-
-.piscina-text p{
-    color:#5c747d;
-    line-height:1.9;
-    margin-bottom:18px;
-}
+.piscina-text p{color:#5c747d;line-height:1.9;margin-bottom:18px}
 
 /* RESPONSÁVEL */
 .responsavel{
@@ -554,16 +458,12 @@ section{
 }
 
 .resp-texto h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:60px;
     margin:10px 0 20px;
 }
 
-.resp-texto p{
-    color:#e8fbff;
-    line-height:1.9;
-    margin-bottom:17px;
-}
+.resp-texto p{color:#e8fbff;line-height:1.9;margin-bottom:17px}
 
 .selo{
     display:inline-block;
@@ -590,22 +490,11 @@ section{
     text-align:center;
     border:1px solid rgba(8,123,150,.08);
 }
-
-.beneficio h3{
-    color:var(--escuro);
-    margin-bottom:10px;
-}
-
-.beneficio p{
-    color:#637b84;
-    line-height:1.7;
-    font-size:14px;
-}
+.beneficio h3{color:var(--escuro);margin-bottom:10px}
+.beneficio p{color:#637b84;line-height:1.7;font-size:14px}
 
 /* GALERIA */
-.galeria{
-    background:white;
-}
+.galeria{background:white}
 
 .galeria-grid{
     display:grid;
@@ -636,15 +525,13 @@ section{
     font-size:14px;
 }
 
-.g1{background-image:url("recepcao.jpg");}
-.g2{background-image:url("piscina.jpg");}
-.g3{background-image:url("clinica.jpg");}
-.g4{background-image:url("fachada.jpg");}
+.g1{background-image:url("recepcao.jpg")}
+.g2{background-image:url("piscina.jpg")}
+.g3{background-image:url("clinica.jpg")}
+.g4{background-image:url("fachada.jpg")}
 
 /* LOCAL */
-.local{
-    background:linear-gradient(135deg,#eaf8fb,#ffffff);
-}
+.local{background:linear-gradient(135deg,#eaf8fb,#ffffff)}
 
 .local-grid{
     display:grid;
@@ -660,17 +547,14 @@ section{
 }
 
 .local-card h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     color:var(--escuro);
     font-size:48px;
     margin-bottom:18px;
 }
 
-.local-card p{
-    color:#607782;
-    line-height:1.8;
-    margin-bottom:17px;
-}
+.local-card p{color:#607782;line-height:1.8;margin-bottom:17px}
+.local-card a:not(.btn-main){color:var(--azul);font-weight:900}
 
 .local-foto{
     min-height:430px;
@@ -690,7 +574,7 @@ section{
 }
 
 .local-foto h3{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:50px;
 }
 
@@ -702,7 +586,7 @@ section{
 }
 
 .cta h2{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:clamp(38px,5vw,66px);
     margin-bottom:18px;
 }
@@ -743,8 +627,8 @@ section{
 }
 
 @keyframes sobeDesce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-6px);}
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
 }
 
 .float-whats{
@@ -762,10 +646,7 @@ section{
     box-shadow:0 14px 35px rgba(24,199,104,.36);
 }
 
-.float-whats img{
-    width:34px;
-    height:34px;
-}
+.float-whats img{width:34px;height:34px}
 
 footer{
     background:#052632;
@@ -774,15 +655,11 @@ footer{
     padding:35px 5%;
 }
 
-footer strong{
-    color:white;
-}
+footer strong{color:white}
 
 /* RESPONSIVO */
 @media(max-width:1100px){
-    .menu{
-        display:none;
-    }
+    .menu{display:none}
 
     .hero-content,
     .sobre-grid,
@@ -792,10 +669,7 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .tratamentos-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
+    .especialidades-grid,
     .beneficios-grid,
     .galeria-grid{
         grid-template-columns:repeat(2,1fr);
@@ -803,57 +677,26 @@ footer strong{
 }
 
 @media(max-width:650px){
-    .btn-whats{
-        display:none;
-    }
+    .btn-whats{display:none}
+    .btn-instagram{padding:12px 15px}
+    .btn-instagram span{display:none}
 
-    .logo h1{
-        font-size:17px;
-    }
+    .logo h1{font-size:17px}
+    .logo img{width:58px;height:58px}
 
-    .logo img{
-        width:58px;
-        height:58px;
-    }
+    .hero{padding-top:130px}
+    .hero-card img{height:310px}
 
-    .hero{
-        padding-top:130px;
-    }
-
-    .hero-card img{
-        height:310px;
-    }
-
-    .tratamentos-grid,
+    .especialidades-grid,
     .beneficios-grid,
     .galeria-grid,
     .mini-destaques{
         grid-template-columns:1fr;
     }
 
-    section{
-        padding:76px 5%;
-    }
-
-    .balaozinho{
-        display:none;
-    }
+    section{padding:76px 5%}
+    .balaozinho{display:none}
 }
-
-.btn-instagram{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    padding:13px 22px;
-    border-radius:50px;
-    background:linear-gradient(135deg,#833AB4,#E1306C,#F77737);
-    color:white;
-    font-weight:900;
-    box-shadow:0 16px 38px rgba(225,48,108,.30);
-    transition:.3s;
-}
-.btn-instagram:hover{transform:translateY(-3px);}
-
 </style>
 </head>
 
@@ -873,47 +716,50 @@ footer strong{
             <a href="#sobre">Sobre</a>
             <a href="#tratamentos">Tratamentos</a>
             <a href="#piscina">Hidroterapia</a>
-            <a href="#responsavel">Karly</a>
+            <a href="#responsavel">Karly Faour</a>
             <a href="#local">Localização</a>
-            <a href="https://www.instagram.com/clinicasaintraphael/" target="_blank" rel="noopener">Instagram</a>
         </nav>
 
+        <div class="top-buttons">
+            <a class="btn-instagram" href="https://www.instagram.com/clinicasaintraphael/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5zm8.75 1.55a1.45 1.45 0 1 1 0 2.9 1.45 1.45 0 0 1 0-2.9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                </svg>
+                <span>Instagram</span>
+            </a>
 
-<a class="btn-instagram" href="https://www.instagram.com/clinicasaintraphael/" target="_blank">
-Instagram
-</a>
-
-
-        <a class="btn-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20mais%20informações." target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            WhatsApp
-        </a>
+            <a class="btn-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                WhatsApp
+            </a>
+        </div>
     </div>
 </header>
 
 <div class="balaozinho">Fale com a recepção</div>
 
-<a class="float-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+<a class="float-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <section class="hero">
     <div class="hero-content">
         <div>
-            <div class="tag">Saúde, cuidado e qualidade de vida</div>
+            <div class="tag">25 anos cuidando da saúde e qualidade de vida</div>
 
             <h2><span>Saint Raphael</span><br>Cuidado completo para você.</h2>
 
             <p>
-                Clínica especializada em Ozonioterapia, Terapias Integrativas, Espirometria,
-                Hidroterapia, Hidroginástica, Psicologia, Fisioterapia e Acupuntura.
+                Clínica especializada em Ozonioterapia, Terapia Neural, Acupuntura, RPG,
+                Fisioterapia Ortopédica e Neurológica, Hidroterapia, Hidroginástica,
+                Liberação Miofascial, Estomaterapia, Drenagem, Psicologia e Terapias Integrativas.
                 Um espaço moderno, acolhedor e preparado para cuidar de cada paciente com atenção,
                 responsabilidade e excelência.
                 <strong>Atendemos pacientes particulares e diversos convênios.</strong>
             </p>
 
             <div class="hero-buttons">
-                <a class="btn-main" href="https://wa.me/5513991808627?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento%20na%20Saint%20Raphael." target="_blank">
+                <a class="btn-main" href="https://wa.me/5513991339971?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento%20na%20Saint%20Raphael." target="_blank" rel="noopener">
                     Agendar atendimento
                 </a>
 
@@ -952,6 +798,12 @@ Instagram
                 </p>
 
                 <p>
+                    Com <strong>25 anos de atuação</strong>, a Saint Raphael construiu uma trajetória
+                    baseada em confiança, cuidado humanizado e compromisso com a saúde e o bem-estar
+                    de seus pacientes.
+                </p>
+
+                <p>
                     Cada atendimento é pensado com responsabilidade, respeitando as necessidades
                     individuais de cada pessoa. O objetivo é proporcionar mais conforto,
                     qualidade de vida e uma experiência de cuidado completa.
@@ -971,8 +823,8 @@ Instagram
                     </div>
 
                     <div class="mini">
-                        <strong>Tratamentos completos</strong>
-                        Saúde, movimento, equilíbrio e bem-estar.
+                        <strong>25 anos de clínica</strong>
+                        Experiência, confiança e dedicação ao cuidado dos pacientes.
                     </div>
 
                     <div class="mini">
@@ -994,119 +846,121 @@ Instagram
     <div class="container">
         <div class="titulo">
             <span>Especialidades</span>
-            <h2>Tratamentos oferecidos</h2>
+            <h2>Nossas Especialidades</h2>
             <p>
-                A Saint Raphael reúne tratamentos e práticas de cuidado que auxiliam no bem-estar,
-                na recuperação física, no equilíbrio emocional e na melhora da qualidade de vida.
+                Tratamentos personalizados para promover cuidado, recuperação,
+                bem-estar e qualidade de vida.
             </p>
         </div>
 
-        <div class="tratamentos-grid">
-
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C8.7 5.4 7 8.2 7 11.1A5 5 0 0 0 12 16a5 5 0 0 0 5-4.9C17 8.2 15.3 5.4 12 2zm0 20c-4.4 0-8-2.8-8-6.2 0-2.2 1.5-4.2 3.8-5.3-.5.9-.8 1.8-.8 2.8A5 5 0 0 0 12 18a5 5 0 0 0 5-4.7c0-1-.3-1.9-.8-2.8 2.3 1.1 3.8 3.1 3.8 5.3C20 19.2 16.4 22 12 22z"/></svg>
+        <div class="especialidades-grid">
+            <div class="especialidade-card">
+                <img src="ozonioterapia.jpg" alt="Ozonioterapia">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">O₂</div>
+                    <h3>Ozonioterapia</h3>
+                    <p>Terapia complementar voltada ao bem-estar e equilíbrio do organismo.</p>
                 </div>
-                <h3>Ozonioterapia</h3>
-                <p>Terapia complementar com acompanhamento profissional, voltada ao cuidado, bem-estar e equilíbrio do organismo.</p>
-                <ul>
-                    <li>Abordagem complementar</li>
-                    <li>Cuidado individualizado</li>
-                    <li>Bem-estar e recuperação</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M12 22C7 18.5 4 14.7 4 10.8 4 6 7.6 3 12 3s8 3 8 7.8c0 3.9-3 7.7-8 11.2zm0-5c2.2 0 4-1.8 4-4 0-2.8-2.6-5.4-4-6.6C10.6 7.6 8 10.2 8 13c0 2.2 1.8 4 4 4z"/></svg>
+            <div class="especialidade-card">
+                <img src="terapia-neural.jpg" alt="Terapia Neural">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">+</div>
+                    <h3>Terapia Neural</h3>
+                    <p>Técnica terapêutica voltada ao equilíbrio e cuidado do organismo.</p>
                 </div>
-                <h3>Terapias Integrativas</h3>
-                <p>Práticas que olham o paciente de forma mais completa, auxiliando no equilíbrio físico e emocional.</p>
-                <ul>
-                    <li>Relaxamento e equilíbrio</li>
-                    <li>Cuidado humanizado</li>
-                    <li>Bem-estar global</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M8 13V5a4 4 0 0 0-4 4v4a5 5 0 0 0 5 5h2v-3H9a1 1 0 0 1-1-1zm8-8v8a1 1 0 0 1-1 1h-2v3h2a5 5 0 0 0 5-5V9a4 4 0 0 0-4-4zM11 2h2v20h-2V2z"/></svg>
+            <div class="especialidade-card">
+                <img src="acupuntura.jpg" alt="Acupuntura">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">✦</div>
+                    <h3>Acupuntura</h3>
+                    <p>Prática terapêutica para equilíbrio corporal e bem-estar.</p>
                 </div>
-                <h3>Espirometria</h3>
-                <p>Exame utilizado para avaliar a função pulmonar e auxiliar no acompanhamento respiratório.</p>
-                <ul>
-                    <li>Avaliação respiratória</li>
-                    <li>Monitoramento pulmonar</li>
-                    <li>Acompanhamento especializado</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C8 6.2 6 9.4 6 12.2A6 6 0 0 0 12 18a6 6 0 0 0 6-5.8C18 9.4 16 6.2 12 2zm0 20c-4.4 0-8-2.5-8-5.6 0-1.4.8-2.8 2-3.8A6 6 0 0 0 12 20a6 6 0 0 0 6-7.4c1.2 1 2 2.4 2 3.8C20 19.5 16.4 22 12 22z"/></svg>
+            <div class="especialidade-card">
+                <img src="rpg.jpg" alt="RPG">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">↕</div>
+                    <h3>RPG</h3>
+                    <p>Reeducação Postural Global para postura e qualidade de movimento.</p>
                 </div>
-                <h3>Hidroterapia</h3>
-                <p>Tratamento realizado na água, com menor impacto nas articulações e mais conforto nos movimentos.</p>
-                <ul>
-                    <li>Menor impacto corporal</li>
-                    <li>Auxílio na reabilitação</li>
-                    <li>Mais segurança nos exercícios</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M4 18c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1v3c-2 0-2-1-4-1s-2 1-4 1-2-1-4-1-2 1-4 1v-3zm0-6c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1v3c-2 0-2-1-4-1s-2 1-4 1-2-1-4-1-2 1-4 1v-3zM7 3h10v5H7V3z"/></svg>
+            <div class="especialidade-card">
+                <img src="fisioterapia.jpg" alt="Fisioterapia">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">♿</div>
+                    <h3>Fisioterapia Ortopédica e Neurológica</h3>
+                    <p>Recuperação funcional, mobilidade e qualidade de vida.</p>
                 </div>
-                <h3>Hidroginástica</h3>
-                <p>Atividade física na água que ajuda no condicionamento, resistência, circulação e disposição.</p>
-                <ul>
-                    <li>Baixo impacto</li>
-                    <li>Fortalecimento gradual</li>
-                    <li>Melhora da disposição</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.3 4.7 3.2 5.9V20h7.6v-5.1A7 7 0 0 0 12 2zm-2 16v-4.3l-.9-.5A5 5 0 1 1 15 13.2l-1 .5V18h-4z"/></svg>
+            <div class="especialidade-card">
+                <img src="hidroterapia.jpg" alt="Hidroterapia">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">≈</div>
+                    <h3>Hidroterapia</h3>
+                    <p>Tratamento na água com conforto e menor impacto corporal.</p>
                 </div>
-                <h3>Psicologia</h3>
-                <p>Atendimento voltado ao cuidado emocional, oferecendo escuta profissional e acolhimento.</p>
-                <ul>
-                    <li>Saúde emocional</li>
-                    <li>Acolhimento profissional</li>
-                    <li>Autoconhecimento</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M9 2h6v7h3l-6 13L6 9h3V2zm2 2v7H9.1L12 17.4 14.9 11H13V4h-2z"/></svg>
+            <div class="especialidade-card">
+                <img src="hidroginastica.jpg" alt="Hidroginástica">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">〰</div>
+                    <h3>Hidroginástica</h3>
+                    <p>Atividade aquática para condicionamento e fortalecimento.</p>
                 </div>
-                <h3>Fisioterapia</h3>
-                <p>Tratamento voltado à recuperação funcional, prevenção, fortalecimento e mobilidade.</p>
-                <ul>
-                    <li>Reabilitação física</li>
-                    <li>Alívio de dores</li>
-                    <li>Recuperação de movimentos</li>
-                </ul>
             </div>
 
-            <div class="tratamento">
-                <div class="icone-img">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l2 8 8 2-8 2-2 8-2-8-8-2 8-2 2-8zm0 7.3L11.3 12l.7 2.7.7-2.7L15.4 12l-2.7-.7L12 8.6z"/></svg>
+            <div class="especialidade-card">
+                <img src="liberacao-miofascial.jpg" alt="Liberação Miofascial">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">✋</div>
+                    <h3>Liberação Miofascial</h3>
+                    <p>Técnica manual para relaxamento muscular e mobilidade.</p>
                 </div>
-                <h3>Acupuntura</h3>
-                <p>Prática terapêutica que pode auxiliar no equilíbrio corporal, relaxamento e cuidado complementar.</p>
-                <ul>
-                    <li>Relaxamento</li>
-                    <li>Equilíbrio corporal</li>
-                    <li>Cuidado complementar</li>
-                </ul>
             </div>
 
+            <div class="especialidade-card">
+                <img src="estomaterapia.jpg" alt="Estomaterapia">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">☤</div>
+                    <h3>Estomaterapia</h3>
+                    <p>Cuidado especializado e acompanhamento profissional.</p>
+                </div>
+            </div>
+
+            <div class="especialidade-card">
+                <img src="drenagem.jpg" alt="Drenagem">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">◆</div>
+                    <h3>Drenagem</h3>
+                    <p>Auxilia na circulação e redução de inchaços.</p>
+                </div>
+            </div>
+
+            <div class="especialidade-card">
+                <img src="psicologia.jpg" alt="Psicologia">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">☁</div>
+                    <h3>Psicologia</h3>
+                    <p>Atendimento voltado à saúde emocional e acolhimento.</p>
+                </div>
+            </div>
+
+            <div class="especialidade-card">
+                <img src="terapias-integrativas.jpg" alt="Terapias Integrativas">
+                <div class="especialidade-conteudo">
+                    <div class="especialidade-icone">✿</div>
+                    <h3>Terapias Integrativas</h3>
+                    <p>Práticas complementares para equilíbrio físico e emocional.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1129,7 +983,7 @@ Instagram
                     mobilidade, fortalecimento, equilíbrio e melhora da qualidade de vida.
                 </p>
 
-                <a class="btn-main" href="https://wa.me/5513991808627?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20hidroterapia%20e%20hidroginástica." target="_blank">
+                <a class="btn-main" href="https://wa.me/5513991339971?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20hidroterapia%20e%20hidroginástica." target="_blank" rel="noopener">
                     Saber mais
                 </a>
             </div>
@@ -1144,10 +998,10 @@ Instagram
 
             <div class="resp-texto">
                 <span>Responsável Técnica</span>
-                <h2>Karly</h2>
+                <h2>Karly Faour</h2>
 
                 <p>
-                    A Saint Raphael conta com a responsabilidade técnica de <strong>Karly</strong>,
+                    A Saint Raphael conta com a responsabilidade técnica de <strong>Karly Faour</strong>,
                     reforçando o compromisso da clínica com segurança, organização, cuidado profissional
                     e qualidade nos atendimentos.
                 </p>
@@ -1181,8 +1035,8 @@ Instagram
             </div>
 
             <div class="beneficio">
-                <h3>Bem-estar</h3>
-                <p>Tratamentos que contribuem para equilíbrio, qualidade de vida e rotina mais saudável.</p>
+                <h3>25 anos de experiência</h3>
+                <p>Uma trajetória construída com confiança, dedicação e compromisso com a saúde dos pacientes.</p>
             </div>
 
             <div class="beneficio">
@@ -1238,7 +1092,7 @@ Instagram
 
                 <p>
                     <strong>Recepção WhatsApp:</strong><br>
-                    (13) 99180-8627
+                    (13) 99133-9971
                 </p>
 
                 <p>
@@ -1251,7 +1105,7 @@ Instagram
                     Consulte nossa equipe para verificar os convênios disponíveis, cobertura e opções de atendimento particular.
                 </p>
 
-                <a class="btn-main" href="https://www.google.com/maps/search/?api=1&query=Rua%20Oswaldo%20Cochrane%20231%20Santos%20SP" target="_blank">
+                <a class="btn-main" href="https://www.google.com/maps/search/?api=1&query=Rua%20Oswaldo%20Cochrane%20231%20Santos%20SP" target="_blank" rel="noopener">
                     Abrir localização
                 </a>
             </div>
@@ -1276,7 +1130,7 @@ Instagram
             e opções de atendimento particular.
         </p>
 
-        <a class="btn-whats" href="https://wa.me/5513991808627?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+        <a class="btn-whats" href="https://wa.me/5513991339971?text=Olá,%20vim%20pelo%20site%20da%20Saint%20Raphael%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
             Falar com a recepção
         </a>
